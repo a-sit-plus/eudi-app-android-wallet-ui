@@ -31,7 +31,7 @@ internal class WalletCoreConfigImpl(
 ) : WalletCoreConfig {
 
     private companion object {
-        const val VCI_ISSUER_URL = "https://dev.issuer.eudiw.dev"
+        const val VCI_ISSUER_URL = "https://issuer.eudiw.dev"
         const val VCI_CLIENT_ID = "wallet-dev"
         const val AUTHENTICATION_REQUIRED = false
     }
@@ -63,7 +63,8 @@ internal class WalletCoreConfigImpl(
                             listOf(
                                 BuildConfig.OPENID4VP_SCHEME,
                                 BuildConfig.EUDI_OPENID4VP_SCHEME,
-                                BuildConfig.MDOC_OPENID4VP_SCHEME
+                                BuildConfig.MDOC_OPENID4VP_SCHEME,
+                                "haip"
                             )
                         )
                         withFormats(
@@ -87,7 +88,8 @@ internal class WalletCoreConfigImpl(
                         R.raw.pidissuerca02_lu,
                         R.raw.pidissuerca02_nl,
                         R.raw.pidissuerca02_pt,
-                        R.raw.pidissuerca02_ut
+                        R.raw.pidissuerca02_ut,
+                        R.raw.pid_issuer_devcaat01,
                     )
                 }
             }
